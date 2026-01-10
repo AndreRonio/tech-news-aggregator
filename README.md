@@ -1,6 +1,6 @@
 # Tech News Aggregator
 
-**Author:** <Andreas Roniotis>
+**Author:** Andreas Roniotis
 
 ## Description
 
