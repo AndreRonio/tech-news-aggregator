@@ -1,20 +1,8 @@
-# tech-news-aggregator
+# Tech News Aggregator
 
-BigBlue Github project 2
+**Author:** <Andreas Roniotis>
 
-
-
-\# Tech News Aggregator
-
-
-
-\*\*Author:\*\* <Andreas Roniotis>
-
-
-
-\## Description
+## Description
 
 Automated ETL pipeline that extracts top stories from the Hacker News API, transforms the data, and loads it into PostgreSQL.
-
-
 
