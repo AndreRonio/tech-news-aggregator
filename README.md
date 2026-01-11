@@ -32,13 +32,12 @@ docker compose -f docker/docker-compose.yml down
 For demonstration/testing purposes, the cron schedule is configured to run every minute:
 
 ```yaml
-\* \* \* \* \*
+* * * * *
 ```
 
 This makes it easier to verify that the pipeline is working (no need to wait 4 hours).
 
 In a production-like scenario, the schedule can be changed to run every 4 hours, by editing docker/cron\_job.
 
-```
 
 
