@@ -1,0 +1,12 @@
+SHELL=/bin/sh
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+
+# Pass container env vars explicitly to cron
+PGHOST=hn_postgres
+PGPORT=5432
+PGDATABASE=hn_db
+PGUSER=hn_user
+PGPASSWORD=hn_pass
+
+# Run every minute (demo)
+* * * * * /usr/local/bin/python3 /app/src/etl_pipeline.py >> /app/data/logs/etl.log 2>&1

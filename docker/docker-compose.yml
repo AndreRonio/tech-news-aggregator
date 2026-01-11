@@ -1,0 +1,29 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: hn_postgres
+    environment:
+      POSTGRES_DB: hn_db
+      POSTGRES_USER: hn_user
+      POSTGRES_PASSWORD: hn_pass
+    ports:
+      - "5433:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  hn_etl:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    container_name: hn_etl
+    depends_on:
+      - postgres
+    environment:
+      PGHOST: hn_postgres
+      PGPORT: 5432
+      PGDATABASE: hn_db
+      PGUSER: hn_user
+      PGPASSWORD: hn_pass
+
+volumes:
+  pgdata:
